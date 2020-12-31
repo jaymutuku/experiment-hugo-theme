@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+  <h1>{{ .Title }}</h1>
+
+  <ul class="posts">
+    {{ range .Pages.ByPublishDate.Reverse }}
+
+    <li class="post">{{ partial "feather.html" "file-text" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+
+    
+    {{ partial "date-and-tags.html" . }}
+
+    <br></br>
+    
+    {{ end }}
+
+  </ul>
+
+  {{ end }}
+
+
+

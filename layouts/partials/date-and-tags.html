@@ -1,0 +1,13 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+
+{{ partial "feather.html" "calendar" }} <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+
+{{ with .Params.tags }}
+  <br>
+  {{ partial "feather.html" "tag" }}
+  {{ range . }}
+  {{ $href := print (absURL "tags/") (urlize .) }}
+  <a href="{{ $href }}">{{ . }}</a>
+  {{ end }}
+{{ end }}

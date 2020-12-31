@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<main>
+    <article>
+
+        <h1>{{ .Title }}</h1>
+
+        <section>
+            {{ .Content }}
+        </section>
+    </article>
+
+    {{ partial "date-and-tags.html" .}}
+
+</main>    
+    
+{{ end }}
+
+
+
+
