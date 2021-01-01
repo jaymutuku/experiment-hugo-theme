@@ -2,17 +2,17 @@
 
   <h1>{{ .Title }}</h1>
 
-  <ul class="posts">
+  <ul class="items">
     {{ range .Pages.ByPublishDate.Reverse }}
 
-    <li class="post">{{ partial "feather.html" "file-text" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  <li class="item">{{ partial "feather.html" "file-text" }}<a href="{{ .RelPermalink }}">{{ .Title }}
+     </a></li>
 
-    
-    {{ partial "date-and-tags.html" . }}
+     {{ partial "date-and-tags.html" . }}
 
-    <br></br>
-    
-    {{ end }}
+     <br><br>
+
+    {{ end }}  
 
   </ul>
 
