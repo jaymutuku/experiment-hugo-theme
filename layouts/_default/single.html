@@ -1,21 +1,9 @@
 {{ define "main" }}
 
-<main>
-    <article>
+<h1>{{ .Title }}</h1>
 
-        <h1>{{ .Title }}</h1>
+{{ partial "metadata.html" .}}
 
-        <section>
-            {{ .Content }}
-        </section>
-    </article>
+{{ .Content }}
 
-    {{ partial "date-and-tags.html" .}}
-
-</main>    
-    
 {{ end }}
-
-
-
-

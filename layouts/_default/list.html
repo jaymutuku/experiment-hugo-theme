@@ -6,13 +6,10 @@
     {{ range .Pages.ByPublishDate.Reverse }}
 
   <li class="item">{{ partial "feather.html" "file-text" }}<a href="{{ .RelPermalink }}">{{ .Title }}
-     </a></li>
+     </a><span style="float:right">{{ partial "date-and-tag.html" . }}</span> </li>
 
-     {{ partial "date-and-tags.html" . }}
-
-     <br><br>
-
-    {{ end }}  
+    <br><br>
+     {{ end }}
 
   </ul>
 
