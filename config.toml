@@ -34,7 +34,7 @@ title = "Pieces"
 
 [params]
     containerMaxWidth = "700px"
-    dateFormat = "Jan 2, 2006"
+    dateFormat = "Jan 02, 2006"
     homeText ="You just made a hugo blog"
 
 [Author]
